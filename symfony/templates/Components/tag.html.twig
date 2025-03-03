@@ -1,0 +1,8 @@
+<ul class="flex">
+    {% set data = tags|json_decode %}
+    {% for item in data %}
+        <li class="flex items-center justify-center bg-black text-white rounded-xl py-1 px-3 mr-2 text-xs">
+            <a href="/?tag={{ item }}">{{ item }}</a>
+        </li>
+    {% endfor %}
+</ul>
